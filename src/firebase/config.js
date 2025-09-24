@@ -6,12 +6,12 @@ import { getStorage } from "firebase/storage";
 
 // Tu configuración de Firebase
 const firebaseConfig = {
-  apiKey: "AIzaSyBSmUnSnMPTOqiVj3xdCnF3a5peZpKB5fU",
-  authDomain: "gobernanza-sartor.firebaseapp.com",
-  projectId: "gobernanza-sartor",
-  storageBucket: "gobernanza-sartor.firebasestorage.app",
-  messagingSenderId: "652899984716",
-  appId: "1:652899984716:web:80c19b82624daec450dbe9"
+  apiKey: import.meta.env.VITE_API_KEY,
+  authDomain: import.meta.env.VITE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_APP_ID
 };
 
 // Inicializar Firebase

@@ -52,7 +52,7 @@ main { padding-top: 1rem; }
 
 /* --- PÁGINAS PRINCIPALES --- */
 .auth-container { display: flex; justify-content: center; align-items: center; min-height: 100vh; padding: 2rem; }
-.auth-form { background: var(--card-bg-color); padding: 2.5rem; border-radius: var(--border-radius); box-shadow: var(--shadow); width: 100%; max-width: 400px; text-align: center; /* Centra el título y el logo */ }
+.auth-form { background: var(--card-bg-color); padding: 2.5rem; border-radius: var(--border-radius); box-shadow: var(--shadow); width: 100%; max-width: 420px; text-align: center; /* Centra el título y el logo */ }
 .home-container { text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: calc(100vh - 150px); }
 .welcome-message { margin-bottom: 3rem; max-width: 800px; }
 .welcome-message h1 { margin: 0; font-size: 2.5rem; }
@@ -315,15 +315,33 @@ ul.acciones-list li {
   text-align: center; 
 }
 
-/* Dejamos los labels alineados a la izquierda */
-.auth-form .form-group label {
-  text-align: left;
+/* --- REGLA CLAVE PARA LOS INPUTS --- */
+.auth-form .form-group {
+  text-align: left; /* Alinea los labels a la izquierda */
+  margin-bottom: 1.5rem; /* Espacio entre los grupos */
 }
 
-/* --- CORRECCIÓN DEL MARGEN DEL BOTÓN --- */
+/* Aplicamos el estilo a TODOS los inputs de tipo texto y contraseña */
+.auth-form .form-group input[type="email"],
+.auth-form .form-group input[type="password"] {
+  width: 100%; /* Ocupa el 100% del ancho del contenedor */
+  padding: 12px;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  font-size: 1rem;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.auth-form .form-group input:focus {
+  outline: none;
+  border-color: var(--jd-green);
+  box-shadow: 0 0 0 3px rgba(54, 124, 43, 0.2);
+}
+
 .auth-button {
   width: 100%;
-  margin-top: 1.5rem; /* <-- ESTA LÍNEA AÑADE EL ESPACIO */
-  padding: 12px; /* Un poco más de padding */
+  margin-top: 1.5rem;
+  padding: 12px;
   font-size: 1rem;
 }
